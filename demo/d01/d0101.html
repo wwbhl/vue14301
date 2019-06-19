@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Vue2 Demo</title>
+</head>
+<body>
+
+<div id="app1">
+    <p>
+<!--        双向绑定name-->
+        <input type="text" v-model="name"/>{{name}}
+    </p>
+    <p>
+        <h2 v-bind:title="time">鼠标悬停试试</h2>
+    </p>
+
+</div>
+<script src="../../js/vue/vue.min.js"></script>
+<script>
+    //定义一个vue实例
+    var vm = new Vue({
+        //当前实例将管理的范围
+        el:"#app1",
+        //数据
+        data:{
+            name:"zhangguo",
+            time:"当前时间:"+new Date().toLocaleString()
+        }
+    });
+
+</script>
+</body>
+</html>
